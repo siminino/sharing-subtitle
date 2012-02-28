@@ -8,7 +8,7 @@ class Projeto(models.Model):
     direcao = models.CharField(max_length=50, blank=True, null=True)
     inicio_exibicao = models.DateField(blank=True, null=True)
     fim_exibicao = models.DateField(blank=True, null=True)
-    imagem = models.ImageField(upload_to="/static/img/projetos/", blank=True, null=True)
+    imagem = models.URLField(blank=True, null=True)
 
     def __unicode__(self):
         return self.titulo
