@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Share Anime Sub</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block css %}
+            <link rel="stylesheet" href="{{ STATIC_URL }}/bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" href="{{ STATIC_URL }}/bootstrap/css/bootstrap-responsive.css">
+            <link rel="stylesheet" href="{{ STATIC_URL }}/base/css/header.css">
+            <link rel="stylesheet" href="{{ STATIC_URL }}/base/css/menu.css">
+        {% endblock %}
+        {% block js %}
+            <script type="text/javascript" src="{{ STATIC_URL }}/base/js/utils/jquery-1.7.1.min.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}/bootstrap/js/bootstrap.js"></script>
+            <script type="text/javascript" src="{{ STATIC_URL }}/bootstrap/js/bootstrap-collapse.js"></script>
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class='container'>
+            {% block header %}
+                {% include "header.html" %}
+            {% endblock %}
+
+            {% block menu %}
+                {% include "menu.html" %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

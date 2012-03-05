@@ -1,0 +1,7 @@
+.menu .navbar-inner {
+    border-radius: 0 0 4px 4px;
+}
+
+.menu .nav.pull-right {
+    margin-right: 30px;
+}
