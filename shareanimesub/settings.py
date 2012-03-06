@@ -130,10 +130,14 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'south',
-    'projetos',
-    'legendas',
-    'fansubers',
 )
+
+MINHAS_APPS = ('projetos',
+               'legendas',
+               'fansubers',
+)
+
+INSTALLED_APPS = INSTALLED_APPS + MINHAS_APPS
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -158,5 +162,9 @@ LOGGING = {
     }
 }
 
-NOSE_ARGS = ['--with-coverage', "-s"]
+NOSE_ARGS = ['--with-coverage',
+             "-s",
+             "--cover-package=" + ",".join(MINHAS_APPS)
+]
+
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
