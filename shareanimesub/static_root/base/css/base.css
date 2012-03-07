@@ -1,0 +1,26 @@
+/* Header */
+
+.header .img-header {
+    background-color: #CCCCCC;
+    height: 200px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+/* Menu */
+
+.menu .navbar-inner {
+    border-radius: 0 0 4px 4px;
+}
+
+.menu .nav.pull-right {
+    margin-right: 30px;
+}
+
+/* Diretorio */
+
+.row.diretorio .span12 {
+    background-color: #DDDDDD;
+    border-radius: 2px 2px 0 0;
+    height: 50px;
+}

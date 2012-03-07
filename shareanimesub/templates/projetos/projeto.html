@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ projeto.titulo }}
+    {{ projeto.genero }}
+    {{ projeto.total_episodios }}
+    {{ projeto.estudio }}
+    {{ projeto.direcao }}
+    {{ projeto.inicio_exibicao }}
+    {{ projeto.fim_exibicao }}
+    <img src="{{ projeto.imagem }}"/>
+{% endblock %}

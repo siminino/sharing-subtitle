@@ -5,8 +5,7 @@
         {% block css %}
             <link rel="stylesheet" href="{{ STATIC_URL }}/bootstrap/css/bootstrap.css">
             <link rel="stylesheet" href="{{ STATIC_URL }}/bootstrap/css/bootstrap-responsive.css">
-            <link rel="stylesheet" href="{{ STATIC_URL }}/base/css/header.css">
-            <link rel="stylesheet" href="{{ STATIC_URL }}/base/css/menu.css">
+            <link rel="stylesheet" href="{{ STATIC_URL }}/base/css/base.css">
         {% endblock %}
         {% block js %}
             <script type="text/javascript" src="{{ STATIC_URL }}/base/js/utils/jquery-1.7.1.min.js"></script>
@@ -23,6 +22,15 @@
 
             {% block menu %}
                 {% include "menu.html" %}
+            {% endblock %}
+        </div>
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+        <div class='container'>
+            {% block diretorio %}
+                {% include "diretorio.html" %}
             {% endblock %}
         </div>
     </body>
