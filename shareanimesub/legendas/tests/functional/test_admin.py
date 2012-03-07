@@ -25,4 +25,6 @@ class LegendaAdminTestCase(TestCase):
     def test_LegendaAdmin_deve_ordenar_por_episodio(self):
         self.assertIn('episodio', LegendaAdmin.ordering)
 
+    def test_LegendaAdmin_deve_ter_field_usuario_como_readonly(self):
+        self.assertIn('usuario', LegendaAdmin.readonly_fields)
 

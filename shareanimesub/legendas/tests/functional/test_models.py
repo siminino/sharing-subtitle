@@ -1,4 +1,5 @@
 from django.utils.unittest import TestCase
+from django.contrib.auth.models import User
 
 from legendas.models import Legenda
 from projetos.models import Projeto
@@ -51,5 +52,15 @@ class LegendaModelTestCase(TestCase):
                                          fansub=fansub)
 
         self.assertEquals(legenda.fansub, fansub)
+
+    def test_criar_legenda_relacionada_com_usuario(self):
+        user = User.objects.create_user(username="test", password="test", email="test@test.com")
+        legenda = Legenda.objects.create(url="http://legendaqq.com",
+                                         projeto=self.projeto,
+                                         episodio=1,
+                                         usuario=user)
+
+        self.assertEquals(legenda.usuario, user)
+        user.delete()
 
 
