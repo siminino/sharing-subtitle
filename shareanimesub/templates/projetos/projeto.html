@@ -1,12 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {{ projeto.titulo }}
-    {{ projeto.genero }}
-    {{ projeto.total_episodios }}
-    {{ projeto.estudio }}
-    {{ projeto.direcao }}
-    {{ projeto.inicio_exibicao }}
-    {{ projeto.fim_exibicao }}
-    <img src="{{ projeto.imagem }}"/>
+    <div class="row">
+        <div class="span12">
+            <ul>
+                <li>
+                    {{ projeto.titulo }}
+                </li>
+                <li>
+                    {{ projeto.genero }}
+                </li>
+                <li>
+                    {{ projeto.total_episodios }}
+                </li>
+                <li>
+                    {{ projeto.estudio }}
+                </li>
+                <li>
+                    {{ projeto.direcao }}
+                </li>
+                <li>
+                    {{ projeto.inicio_exibicao }}
+                </li>
+                <li>
+                    {{ projeto.fim_exibicao }}
+                </li>
+            </ul>
+            <img src="{{ projeto.imagem }}"/>
+        </div>
+    </div>
 {% endblock %}
