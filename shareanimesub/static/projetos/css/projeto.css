@@ -1,0 +1,55 @@
+.row .span9 {
+    width: 900px;
+}
+
+.row.projeto-titulo {
+    padding-top: 20px;
+}
+
+.row.projeto-titulo div h1 {
+    margin-left: 34px;
+}
+
+.row.dados {
+    padding-top: 10px;
+    margin-bottom: 100px;
+}
+
+.row .projeto-imagem {
+    text-align: center;
+}
+
+.row .projeto-imagem img {
+    border-radius: 2px;
+}
+
+.row .projeto-dados {
+    margin-left: 0;
+    width: 100%;
+}
+
+.row .projeto-dados tr td {
+    padding: 4px;
+}
+
+.row .projeto-dados tr td:first-child {
+    text-indent: 20px;
+    width: 170px;
+    font-weight: bold;
+}
+
+.row .projeto-dados tr td:last-child {
+    padding-right: 20px;
+    border-left: 0;
+}
+
+.row .projeto-dados tr:first-child td {
+    padding-top: 20px;
+}
+
+.row .projeto-dados tr:last-child td {
+    padding-bottom: 20px;
+}
+.row .span9 {
+    margin-left: 0;
+}

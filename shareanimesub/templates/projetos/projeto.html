@@ -1,32 +1,47 @@
 {% extends "base.html" %}
 
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{{ STATIC_URL }}projetos/css/projeto.css">
+{% endblock %}
+
 {% block content %}
-    <div class="row">
+    <div class="row projeto-titulo">
         <div class="span12">
-            <ul>
-                <li>
-                    {{ projeto.titulo }}
-                </li>
-                <li>
-                    {{ projeto.genero }}
-                </li>
-                <li>
-                    {{ projeto.total_episodios }}
-                </li>
-                <li>
-                    {{ projeto.estudio }}
-                </li>
-                <li>
-                    {{ projeto.direcao }}
-                </li>
-                <li>
-                    {{ projeto.inicio_exibicao }}
-                </li>
-                <li>
-                    {{ projeto.fim_exibicao }}
-                </li>
-            </ul>
-            <img src="{{ projeto.imagem }}"/>
+            <h1>{{ projeto.titulo }}</h1>
+        </div>
+    </div>
+    <div class="row dados">
+        <div class="span3 projeto-imagem">
+            <img width="200" src="{{ projeto.imagem }}"/>
+        </div>
+        <div class="span9">
+            <table class="projeto-dados table-bordered">
+                <tr>
+                    <td>Genero:</td>
+                    <td>{{ projeto.genero }}</td>
+                </tr>
+                <tr>
+                    <td>Total de episodios:</td>
+                    <td>{{ projeto.total_episodios }}</td>
+                </tr>
+                <tr>
+                    <td>Estúdio:</td>
+                    <td>{{ projeto.estudio }}</td>
+                </tr>
+                <tr>
+                    <td>Direção:</td>
+                    <td>{{ projeto.direcao }}</td>
+                </tr>
+                <tr>
+                    <td>Inicio da exibição:</td>
+                    <td>{{ projeto.inicio_exibicao }}</td>
+                </tr>
+                <tr>
+                    <td>Fim da exibição:</td>
+                    <td>{{ projeto.fim_exibicao }}</td>
+                </tr>
+            </table>
         </div>
     </div>
 {% endblock %}

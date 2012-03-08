@@ -19,8 +19,6 @@ urlpatterns = patterns('',
     url(r'^projeto/(?P<projeto_id>\d+)/$', 'projetos.views.pagina_projeto'),
 
 
-
-
     url(r'^admin/', include(admin.site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
 
