@@ -53,9 +53,9 @@
                         <th>Fansub</th>
                         <th>Raws</th>
                         <th>Atualizado por</th>
-                        <th>download</th>
+                        <th>Link</th>
                     </thead>
-                    {% for legenda in projeto.legenda_set.all %}
+                    {% for legenda in projeto.legenda_set.all|dictsort:"episodio" %}
                         <tr>
                             <td>{{ legenda.episodio }}</td>
                             <td>{% firstof legenda.fansub.nome or '----'%}</td>
