@@ -1,5 +1,5 @@
 .row .span9 {
-    width: 900px;
+    width: 864px;
 }
 
 .row.projeto-titulo {
@@ -59,6 +59,11 @@
     margin-left: 0;
 }
 
+
+.row.legendas .table{
+    margin-left: 34px;
+    width: 1100px;
+}
 .row.legendas .table thead th:last-child {
     width: 70px;
 }
