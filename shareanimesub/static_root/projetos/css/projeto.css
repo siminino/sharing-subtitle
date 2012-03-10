@@ -49,6 +49,7 @@
 
 .row .projeto-dados tr:first-child td {
     padding-top: 20px;
+    text-align: center;
 }
 
 .row .projeto-dados tr:last-child td {
@@ -56,4 +57,20 @@
 }
 .row .span9 {
     margin-left: 0;
+}
+
+.row.legendas .table thead th:last-child {
+    width: 70px;
+}
+
+.row.legendas .table thead th:first-child {
+    width: 22px;
+}
+
+.row.legendas .table thead th:nth-child(2) {
+    width: 150px;
+}
+
+.row.legendas .table thead th:nth-child(4) {
+    width: 200px;
 }
