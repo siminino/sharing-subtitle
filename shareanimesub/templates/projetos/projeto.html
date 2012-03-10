@@ -48,14 +48,14 @@
         <div class="span12">
             {% if projeto.legenda_set.all %}
                 <table class="table table-bordered">
+                    <thead>
+                        <th>#</th>
+                        <th>Fansub</th>
+                        <th>Raws</th>
+                        <th>Atualizado por</th>
+                        <th>download</th>
+                    </thead>
                     {% for legenda in projeto.legenda_set.all %}
-                        <thead>
-                            <th>#</th>
-                            <th>Fansub</th>
-                            <th>Raws</th>
-                            <th>Atualizado por</th>
-                            <th>download</th>
-                        </thead>
                         <tr>
                             <td>{{ legenda.episodio }}</td>
                             <td>{% firstof legenda.fansub.nome or '----'%}</td>
