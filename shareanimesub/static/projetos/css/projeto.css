@@ -12,7 +12,11 @@
 
 .row.dados {
     padding-top: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+}
+
+.row.legendas {
+    margin-bottom: 50px;
 }
 
 .row .projeto-imagem {
