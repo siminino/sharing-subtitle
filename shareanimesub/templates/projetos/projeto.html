@@ -19,27 +19,27 @@
             <table class="projeto-dados table-bordered">
                 <tr>
                     <td>Genero:</td>
-                    <td>{{ projeto.genero }}</td>
+                    <td>{% firstof projeto.genero '----' %}</td>
                 </tr>
                 <tr>
                     <td>Total de episodios:</td>
-                    <td>{{ projeto.total_episodios }}</td>
+                    <td>{% firstof projeto.total_episodios '----' %}</td>
                 </tr>
                 <tr>
                     <td>Estúdio:</td>
-                    <td>{{ projeto.estudio }}</td>
+                    <td>{% firstof projeto.estudio '----' %}</td>
                 </tr>
                 <tr>
                     <td>Direção:</td>
-                    <td>{{ projeto.direcao }}</td>
+                    <td>{% firstof projeto.direcao '----' %}</td>
                 </tr>
                 <tr>
                     <td>Inicio da exibição:</td>
-                    <td>{{ projeto.inicio_exibicao }}</td>
+                    <td>{% firstof projeto.inicio_exibicao '----' %}</td>
                 </tr>
                 <tr>
                     <td>Fim da exibição:</td>
-                    <td>{{ projeto.fim_exibicao }}</td>
+                    <td>{% firstof projeto.fim_exibicao '----' %}</td>
                 </tr>
             </table>
         </div>
