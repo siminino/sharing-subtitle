@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{{ STATIC_URL }}projetos/css/listagem_projetos.css">
+{% endblock %}
+
+{% block content %}
+    <div class="row titulo">
+        <div class="span12">
+            <h1>Projetos</h1>
+        </div>
+    </div>
+    <div class="row projetos">
+        <div class="span12">
+            <ul class="listagem">
+                {% for projeto in projetos %}
+                <li data="{{ projeto.id }}">
+                        <span>{{ projeto.titulo }}</span>
+                        <span>{{ projeto.genero }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
