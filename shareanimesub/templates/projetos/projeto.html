@@ -44,4 +44,30 @@
             </table>
         </div>
     </div>
+    <div class="row legendas">
+        <div class="span12">
+            {% if projeto.legenda_set.all %}
+                <table class="table table-bordered">
+                    {% for legenda in projeto.legenda_set.all %}
+                        <thead>
+                            <th>#</th>
+                            <th>Fansub</th>
+                            <th>Raws</th>
+                            <th>Atualizado por</th>
+                            <th>download</th>
+                        </thead>
+                        <tr>
+                            <td>{{ legenda.episodio }}</td>
+                            <td>{% firstof legenda.fansub.nome or '----'%}</td>
+                            <td>{% firstof legenda.raws '----' %}</td>
+                            <td>{% firstof legenda.usuario '----' %}</td>
+                            <td><a href="{{ legenda.url }}">download</a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                Não há legendas disponíneis.
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}

@@ -4,6 +4,8 @@ from django.test.client import RequestFactory, Client
 
 from projetos.models import Projeto
 from projetos.views import pagina_projeto
+from legendas.models import Legenda
+from fansubers.models import Fansub
 
 class ProjetoViewTestCase(TestCase):
 
@@ -47,3 +49,10 @@ class ProjetoViewTestCase(TestCase):
             assert False
 
         self.assertEquals(200, response.status_code)
+
+    def test_deve_retornar_legendas_do_projeto(self):
+        fansub = Fansub.objects.create(nome="fansubqq")
+        legenda = Legenda.objects.create(url="http://urlqqdeteste.com", episodio=1, projeto=self.projeto, raws='rawqq', fansub=fansub)
+        response = pagina_projeto(self.request, self.projeto.id)
+
+        self.assertIn(legenda, response.context_data['projeto'].legenda_set.all())
