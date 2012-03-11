@@ -15,7 +15,7 @@
         <div class="span12">
             <ul class="listagem">
                 {% for projeto in projetos %}
-                <li data="{{ projeto.id }}">
+                <li href="/projeto/{{ projeto.id }}/">
                         <span>{{ projeto.titulo }}</span>
                         <span>{{ projeto.genero }}</span>
                     </li>
@@ -23,4 +23,12 @@
             </ul>
         </div>
     </div>
+    <script type="text/javascript">
+        $('.projetos ul.listagem li').bind('click', function(){
+            var $li = $(this);
+            window.location = $li.attr('href');
+        })
+    </script>
 {% endblock %}
+
+

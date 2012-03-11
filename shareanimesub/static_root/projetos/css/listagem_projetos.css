@@ -4,6 +4,7 @@
 
 .row.projetos {
     padding-top: 10px;
+    margin-bottom: 50px;
 }
 
 .row.projetos div > *, .row.titulo div > * {
@@ -22,6 +23,11 @@
 .row.projetos ul.listagem li {
     border-bottom: 1px solid #ddd;
     line-height: 30px;
+}
+
+.row.projetos ul.listagem li:hover {
+    background-color: #F5F5F5;
+    cursor: pointer;
 }
 
 .row.projetos ul.listagem li:last-child {
