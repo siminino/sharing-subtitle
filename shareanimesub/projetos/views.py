@@ -9,7 +9,7 @@ def pagina_projeto(request, projeto_id):
     return TemplateResponse(request, 'projetos/projeto.html', {'projeto': projeto})
 
 def listagem_projetos(request):
-    projetos = Projeto.objects.all()
+    projetos = Projeto.objects.all().order_by('titulo')
     return TemplateResponse(request, 'projetos/listagem_projetos.html', {'projetos': projetos})
 
 def view_test(request):
